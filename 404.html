@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BC_Chatter</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/modal.css">
+    <link rel="stylesheet" href="stylesheets/but.css">
+    <link rel="stylesheet" href="stylesheets/signupcss.css">
+</head>
+<body class="container messages-wrapper">
+<header>
+    <h1 style="color: antiquewhite" >
+        <span data-chat="Pikachu">Chatter</span>
+    </h1>
+
+    <a href="#openModal" data-chat="buttonSignup" class="button">SIGN UP</a>
+
+    <a href="#openModal_" data-chat="buttonSignin" class="button">SIGN IN</a>
+
+    <div id="openModal" class="modalDialog" data-opn-modal="modal">
+        <div>
+            <a href="#" title="Закрыть" class="close">X</a>
+            <div class="card-body">
+                <form class="main_form" data-login="form">
+                    <div class="form-group">
+                        <input class="form-control" type="text" autofocus required name="name"
+                               placeholder="name">
+                        <input class="form-control" type="text" autofocus required name="password"
+                               placeholder="password">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-shadow px-3 my-2 ml-0 text-left">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="openModal_" class="modalDialog" data-opn-modal="modal_">
+        <div>
+            <a href="#" title="Закрыть" class="close">X</a>
+            <div class="card-body">
+                <form class="main_form" data-login="form_">
+                    <div class="form-group">
+                        <input class="form-control" type="text" autofocus required name="name"
+                               placeholder="name">
+                        <input class="form-control" type="text" autofocus required name="password"
+                               placeholder="password">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-shadow px-3 my-2 ml-0 text-left">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="innerContainer">
+    <ul class="card users-list" data-chat="users">
+    </ul>
+    <ul class="card messages-list" data-chat="list">
+
+    </ul>
+</div>
+<form class="input-group" data-chat="form">
+    <input class="form-control" type="text" data-chat="input">
+    <div class="input-group-append">
+        <button class="button_send" type="submit">
+            <span data-title="OH YEAH!" class="o">SEND</span>
+        </button>
+    </div>
+</form>
+<script src="src/bundle.js"></script>
+</body>
+</html>
